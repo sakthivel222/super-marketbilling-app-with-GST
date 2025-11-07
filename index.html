@@ -1,45 +1,18 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <title>Supermarket Billing App with GST</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Supermarket Billing</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Supermarket Billing App with GST</h1>
-
-    <div class="controls">
-      <select id="productSelect"></select>
-      <input id="qty" type="number" min="1" value="1" />
-      <button id="addBtn">Add to Cart</button>
-      <button id="clearBtn">Clear Cart</button>
-    </div>
-
-    <table id="cartTable">
-      <thead>
-        <tr><th>Code</th><th>Name</th><th>Qty</th><th>Rate</th><th>CGST</th><th>SGST</th><th>Total</th><th>Action</th></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-
-    <div class="totals">
-      <div>Subtotal: <span id="subtotal">0.00</span></div>
-      <div>Total GST: <span id="totalGst">0.00</span></div>
-      <div>Grand Total: <span id="grandTotal">0.00</span></div>
-    </div>
-
-    <div class="bill-controls">
-      <input id="cashier" placeholder="Cashier name" />
-      <button id="printBtn">Generate & Save Bill</button>
-    </div>
-
-    <div>
-      <h3>Generated Bill</h3>
-      <textarea id="billText" rows="10" cols="80" readonly></textarea>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <h1>Supermarket Billing with GST</h1>
+  <div id="items"></div>
+  <h2>Cart</h2>
+  <div id="cart"></div>
+  <button onclick="generateBill()">Generate Bill</button>
+  <h2>Invoice</h2>
+  <pre id="invoice"></pre>
+  <script src="app.js"></script>
 </body>
 </html>
+
